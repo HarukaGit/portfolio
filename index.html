@@ -5,15 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
 </head>
-<header></header>
 <body>
-    <h1>portfolio</h1>
+    <header>
+        <nav id="nav">
+            <a href="#"><img id="logo" src="./img/ロゴマーク.svg" alt="ロゴマーク"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="mainvisual">
+            <h1 id="mainvisual-text">Welcome to<br>
+                  Haruka Kato<br>
+                Portfolio Website</h1>
+            </div>
+            <section id="about">
+                <h2 class="about-title">About</h2>
+                <p class="ruby">自己紹介</p>
+                <div class="about-inner">
+                    <img class="about-image" src="./img/顔写真白黒.png" alt="顔写真">
+                    <button id="view-more">view more</button>
+                    <div class="about-description">
+                        <p>1999年生まれ　大分県出身<br>
+                            長岡造形大学　建築・環境デザイン学科を卒業<br>
+                            <br>
+                            幼少期からデザインに興味があり音楽、ファッションなど幅広く趣味を持つ。<br>
+                            大学在学中の怪我により車椅子生活になるがWEBデザイナーを志す。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <h2 class="skills-title">Skills</h2>
+                <p class="ruby">できること</p>
+                <div class="design-wrapper">
+                <p class="ruby">デザイン</p>
+                <h3 class="skills-design">Design</h3>
+                <p class="skills-design-description">Webサイト、バナーなどのグラフィックデザイン制作ができます。細部に<br>
+                                                    妥協せず、良いものを作るためにこだわりを持って取り組んでいます。<br>
+                                                    また見た目の美しさだけでなく、情報設計や機能性といった部分にも配慮します。<br>
+                                                    有用で質が高く、またその先で、人の心を動かせるようなデザインを目指しています。</p>
+                <p>Tools:Illustrator / Photoshop / Figma</p>
+                </div>  
+                <div class="development-wrapper">
+                    <p class="ruby">開発</p>
+                    <h3 class="skills-development">Development</h3>
+                    <p class="skills-development-description">Webサイト、バナーなどのグラフィックデザイン制作ができます。細部に<br>
+                                                            妥協せず、良いものを作るためにこだわりを持って取り組んでいます。<br>
+                                                            また見た目の美しさだけでなく、情報設計や機能性といった部分にも配慮します。<br>
+                                                            有用で質が高く、またその先で、人の心を動かせるようなデザインを目指しています。</p>
+                <p>Tools:HTML / CSS / JavaScript / GSAP</p>
+                </div>                           
+            </section>
+            <section id="Works"></section>
+        </div>
+    </main>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-<script src="./script.js"></script>
+<script src="./script.js"></script> -->
 
 <footer></footer>
 </html>

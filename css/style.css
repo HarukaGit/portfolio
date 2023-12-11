@@ -1,9 +1,27 @@
 @charset "UFT-8";
 
 html {
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 100%;
     max-width: 100%;
 }
 body {
     font-size: 100%;
+}
+
+/* -----文字についての設定----- */
+.ruby {
+    color: #909090;
+}
+
+/* -----header----- */
+
+#logo {
+    width: 200px;
+}
+
+
+/* -----about----- */
+.about-image {
+    max-width: 20%;
 }
