@@ -15,13 +15,49 @@ body {
 }
 
 /* -----header----- */
-
+#nav {
+    display: flex;
+}
+#nav ul {
+    display: flex;
+}
 #logo {
     width: 200px;
 }
 
 
+
 /* -----about----- */
 .about-image {
     max-width: 20%;
+}
+
+/* -----works----- */
+.carousel ul {
+    display: flex;
+    list-style: none;
+}
+.works-image {
+    max-width: 100%;
+}
+.thumbnail-box {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.works-thumbnail {
+    max-width: 50%;
+}
+
+/* -----cotact----- */
+#contact a {
+    text-decoration: none;
+}
+
+/* -----footer----- */
+footer {
+    display: flex;
+}
+.footer-logo {
+    max-width: 10%;
 }
