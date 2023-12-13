@@ -25,7 +25,10 @@ body {
     width: 200px;
 }
 
-
+/* -----mainvisual----- */
+.mainvisual-logo {
+    width: 150px;
+}
 
 /* -----about----- */
 .about-image {
@@ -60,4 +63,52 @@ footer {
 }
 .footer-logo {
     max-width: 10%;
+}
+
+
+
+/* ---------------------------------
+aboutページ
+-----------------------------------*/
+.wheelchair-image {
+    width: 100%;
+}
+
+/* -----career----- */
+#career ul {
+    list-style: none
+}
+#career li {
+    display: flex;
+}
+.left {
+    border-right: 5px solid #909090;
+}
+
+
+
+/* ----------------------------------
+worksページ
+------------------------------------ */
+.work-mockup {
+    max-width: 50%;
+}
+.work-information ul {
+    list-style: none;
+}
+.work-information li {
+    display: flex;
+}
+.production-period {
+    display: flex
+}
+.tools-used {
+    display: flex;
+}
+.site-screen {
+    max-width: 80%;
+    display: flex;
+}
+.desktop-screen {
+    max-width: 80%;
 }
