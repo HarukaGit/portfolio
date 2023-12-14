@@ -1,5 +1,11 @@
 @charset "UFT-8";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 100%;
@@ -15,14 +21,39 @@ body {
 }
 
 /* -----header----- */
+header {
+    position: fixed;
+    width: 100%;
+    border: 1px solid #000;
+    border-top: none;
+    border-radius: 0 0 25px 25px;
+    backdrop-filter: blur(4px);
+}
 #nav {
     display: flex;
+    justify-content: center;
+    position: relative;
 }
 #nav ul {
+    list-style: none;
     display: flex;
+    gap: 30px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 30px;
 }
-#logo {
-    width: 200px;
+#nav li a {
+    font-size: 20px;
+    text-decoration: none;
+    mix-blend-mode: difference;
+    color: #000;
+}
+#nav-logo {
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* -----mainvisual----- */
@@ -52,7 +83,7 @@ body {
     max-width: 50%;
 }
 
-/* -----cotact----- */
+/* -----contact----- */
 #contact a {
     text-decoration: none;
 }
@@ -110,5 +141,10 @@ worksページ
     display: flex;
 }
 .desktop-screen {
-    max-width: 80%;
+    width: 75%;
+    height: 100%;
+}
+.smartphone-screen {
+    width: 25%;
+    height: 100%;
 }
