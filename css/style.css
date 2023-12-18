@@ -15,14 +15,30 @@ html {
 
 body {
     font-size: 100%;
+    overflow-x: hidden;
 }
 
 
-/* -----共通設定------ */
+/* -----------------------------------------------
+共通設定
+-------------------------------------------------- */
+main {
+    position: relative;
+    z-index: 10;
+}
+.background-image {
+    position: absolute;
+    position: fixed;
+    z-index: -1;
+    height: 90vh;
+    top: 10px;
+    right: -50vh
+}
 .black-container {
     color: #fff;
     background-color: #2C3630;
     border-radius: 50px 50px 0 0;
+    margin-top: -50px;
     padding-top: 90px;
     padding-bottom: 140px;
 }
@@ -32,7 +48,7 @@ body {
     border-radius: 50px 50px 0 0;
     margin-top: -50px;
     padding-top: 90px;
-    padding-bottom: 90px;
+    padding-bottom: 140px;
 }
 
 .black-title {
@@ -76,6 +92,7 @@ body {
 /* -----header----- */
 header {
     position: fixed;
+    z-index: 20;
     width: 100%;
     border: 1px solid #000;
     border-top: none;
@@ -110,9 +127,43 @@ header {
 
 #nav-logo {
     height: 60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
 }
+
+
+/* ハンバーガーメニューアイコン */
+.drawer_hidden {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+  
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer_open span:before {
+    bottom: 8px;
+  }
+  .drawer_open span:after {
+    top: 8px;
+  }  
 
 /* -----footer----- */
 footer {
@@ -135,8 +186,48 @@ footer {
         }
     }
 }
+/* ------------------------------------------------------
+共通設定　レスポンシブ
+-------------------------------------------------------- */
+@media screen and (max-width:600px) {
+    header {
+        border: none;
+        backdrop-filter: none;
 
+        #nav {
+            justify-content: space-between;
+        }
 
+        #nav-logo {
+            width: 30px;
+            margin-top: 46px;
+            margin-left: 30px;
+        }
+        #nav ul {
+            display: none;
+        }
+    }
+
+    .black-title,
+    .white-title{
+        text-align: start;
+        font-size: 3rem;
+    }
+    
+    .ruby {
+        text-align: start;
+    }
+    .container-width {
+        margin-inline: 30px;
+    }
+    
+    footer {
+        font-size: 0.75rem;
+    }
+}
+/* -------------------------------------------------
+topページ
+---------------------------------------------------- */
 /* -----mainvisual----- */
 #mainvisual {
     aspect-ratio: 16/9;
@@ -176,6 +267,9 @@ footer {
 
 
 /* -----about----- */
+#about {
+    margin-block: 200px;
+}
 .about-inner {
     display: flex;
     margin-block: 50px;
@@ -241,9 +335,6 @@ footer {
 }
 
 /* -----works----- */
-#works {
-
-}
 .carousel {
     margin-block: 50px;
 }
@@ -252,16 +343,16 @@ footer {
     display: flex;
     list-style: none;
     gap: 50px;
-
+    
     .works-image {
         max-width: 100%;
         border-radius: 30px;
     }
-
+    
     & li:first-child {
         transform: translateX(-50%);
     }
-
+    
     & li:last-child {
         transform: translateX(50%);
     }
@@ -271,6 +362,7 @@ footer {
     display: flex;
     list-style: none;
     max-width: 900px;
+    margin-top: 50px;
     margin-inline: auto;
 }
 
@@ -282,8 +374,7 @@ footer {
 .mail {
     font-size:min(4vw,70px);
     text-align: center;
-    margin-block: 50px;
-    
+    margin-top: 50px;    
     & a {
         text-decoration: none;
         color: #909090;
@@ -303,6 +394,17 @@ footer {
 
 
 
+/* ------------------------------------------------------
+topページ　レスポンシブ
+-------------------------------------------------------- */
+@media screen (min-width:600px) {
+    }
+
+
+
+
+
+
 
 /* -------------------------------------------------------
 aboutページ
@@ -312,13 +414,13 @@ aboutページ
 .about-top {
     background-color: #2C3630;
     padding-block: 200px;
-
+    
     .about-title {
         color: #2C3630;
+        -webkit-text-stroke: 1px #fff;    
         font-size: 6rem;
         text-align: center;
-        margin-bottom: 15px;
-        -webkit-text-stroke: 1px #fff;    
+        margin-block: 100px;
     }
 
     & img {
@@ -327,7 +429,7 @@ aboutページ
     }
 }
 
-/* -----introduction */
+/* -----introduction------ */
 #introduction {
     .text-block {
         margin-top: 30px;
@@ -398,40 +500,102 @@ aboutページ
 
 
 
-/* ----------------------------------
+/* --------------------------------------------------------
 worksページ
------------------------------------- */
-.work-mockup {
-    max-width: 50%;
+---------------------------------------------------------- */
+.works-title {
+        color: #000;
+        font-size: 6rem;
+        text-align: center;
+        margin-block: 100px;
 }
 
-.work-information ul {
-    list-style: none;
+/* -----作品説明----- */
+.work-wrapper {
+    padding-block: 200px;
+
+    & h2 {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .work-mockup {
+        text-align: center;
+        margin-block: 50px;
+
+        & img {
+            max-width: 900px;
+        }
+    }
+    .work-category {
+        text-align: end;
+        margin-bottom: 50px;
+
+        & p {
+            display: inline-block;
+            text-align: left;
+
+        }
+    }
+    .work-information {
+
+        & ul {
+            list-style: none;
+            
+        }
+        & li {
+            display: flex;
+            margin-bottom: 50px;
+
+            .work-information-title {
+                width: 30%;
+            }
+            .work-informaiton-description {
+                width: 70%;
+            }
+        }
+    }
+    .work-making {
+        text-align: center;
+
+        .production {
+            display: inline-block;
+
+            .production-period {
+                display: flex; 
+                gap: 30px;
+                
+            }
+            .tools-used {
+                display: flex;
+                gap: 30px;
+            }
+        }
+
+    }
 }
 
-.work-information li {
-    display: flex;
-}
-
-.production-period {
-    display: flex
-}
-
-.tools-used {
-    display: flex;
-}
-
+/* -----作品スクリーン画面----- */
 .site-screen {
-    max-width: 80%;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    .desktop-screen {
+        width: 66%;
+        height: 100%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+                    -5px -5px 15px rgba(0, 0, 0, 0.25);
+    }
+    .smartphone-screen {
+        width: 25%;
+        height: 100%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+                    -5px -5px 15px rgba(0, 0, 0, 0.25);
+    }
+}
+/* -----footer----- */
+.black-footer {
+    background-color: #2C3630;
 }
 
-.desktop-screen {
-    width: 75%;
-    height: 100%;
-}
 
-.smartphone-screen {
-    width: 25%;
-    height: 100%;
-}

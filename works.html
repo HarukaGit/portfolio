@@ -27,49 +27,55 @@
         </nav>
     </header>
     <main>
-        <div class="white-container container-width">
-            <h1 class="black-title">Works</h1>
-            <h2 class="subtitle">Works Example Name</h2>
-            <img class="work-mockup" src="./img/worksモックアップ例２.webp" alt="">
-            <div class="work-category">
-                <p class="work-type">Type<span>種類</span>SNSバナー</p>
-                <p class="work-content">Content<span>内容</span>自主制作</p>
-            </div>
-            <div class="work-information">
-                <ul>
-                    <li>
-                        <p class="work-information-title">目的</p>
-                        <p class="work-informaiton-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <p class="work-information-title">ターゲット</p>
-                        <p class="work-informaiton-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <p class="work-information-title">コンセプト</p>
-                        <p class="work-informaiton-description">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                    </li>
-                    <li>
-                        <p class="work-information-title">デザインの説明</p>
-                        <p class="work-informaiton-description">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="work-making">
-                <div class="production-period">
-                    <p class="production-period-title">制作期間</p>
-                    <div class="production-period-box">
-                        <p>企画　　　　：一週間</p>
-                        <p>カンプ　　　　：一週間</p>
-                        <p>コーディング：二週間</p>
-                    </div>
-                    <div class="tools-used">
-                        <p class="tools-used-title">使用ツール</p>
-                        <p>Illustrator / Photoshop / Figma / Visual Studio Code</p>
+        <div class="container-width">
+            <div class="work-wrapper">
+                <h1 class="works-title">Works</h1>
+                <h2 class="subtitle">Works Example Name</h2>
+                <div class="work-mockup">
+                    <img src="./img/worksモックアップ例２.webp" alt="">
+                </div>
+                <div class="work-category">
+                    <p>Type <span class="gray-text"> 　　 種類：</span> SNSバナー<br>
+                       Content<span class="gray-text">　内容：</span>自主制作</p>
+                </div>
+                <div class="work-information">
+                    <ul>
+                        <li>
+                            <p class="work-information-title">目的</p>
+                            <p class="work-informaiton-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                        <li>
+                            <p class="work-information-title">ターゲット</p>
+                            <p class="work-informaiton-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                        <li>
+                            <p class="work-information-title">コンセプト</p>
+                            <p class="work-informaiton-description">
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                        </li>
+                        <li>
+                            <p class="work-information-title">デザインの説明</p>
+                            <p class="work-informaiton-description">
+                                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="work-making">
+                    <div class="production">
+                        <div class="production-period">
+                            <p class="production-period-title">制作期間　</p>
+                            <div class="period gray-text">
+                                <p>企画　　　　：一週間<br>
+                                カンプ　　　：一週間<br>
+                                コーディング：二週間</p>
+                            </div>
+                        </div>
+                        <div class="tools-used">
+                            <p class="tools-used-title">使用ツール</p>
+                            <p class="gray-text">Illustrator / Photoshop / Figma / Visual Studio Code</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,10 +120,14 @@
             </section>
         </div>
     </main>
-    <footer>
-        <p>All Rights Reserved 2023 &copy; Haruka Kato</p>
-        <p>Back to top</p>
-        <img class="footer-logo" src="./img/ロゴマーク.svg" alt="">
+    <footer class="black-footer">
+        <div class="container-width footer-wrapper">
+            <p>All Rights Reserved 2023 &copy; Haruka Kato</p>
+            <div class="back-to-top">
+                <p>Back to top</p>
+                <img class="footer-logo" src="./img/フッターロゴマーク.svg" alt="">
+            </div>
+        </div>
     </footer>
 </body>
 
