@@ -2,7 +2,7 @@
 
 if (window.matchMedia('(max-width: 600px)').matches) {
 
-
+  let br = document.querySelector('.mainvisual-name-text').textContent = 'aruka\nKato'
 
 
 
@@ -20,8 +20,8 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 
 
 
-gsap.to("h1", {
-    duration: 2,
-    text: "This is the new text",
-    ease: "none",
-  });
+// gsap.to("h1", {
+//     duration: 2,
+//     text: "This is the new text",
+//     ease: "none",
+//   });

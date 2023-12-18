@@ -130,8 +130,17 @@ header {
     margin-top: 5px;
 }
 
+.mainvisual-name-text2 {
+    display: none;
+}
 
-/* ハンバーガーメニューアイコン */
+/* ----------------------------------------------- */
+
+
+
+
+
+/* ハンバーガーメニューアイコン
 .drawer_hidden {
     display: none;
   }
@@ -163,7 +172,7 @@ header {
   }
   .drawer_open span:after {
     top: 8px;
-  }  
+  }   */
 
 /* -----footer----- */
 footer {
@@ -255,6 +264,8 @@ topページ
             margin-left: -3.5vw;
             margin-bottom: 5.5vw;
             font-size: 10vw;
+            font-stretch: ;
+
         }
     }
 
@@ -397,8 +408,46 @@ topページ
 /* ------------------------------------------------------
 topページ　レスポンシブ
 -------------------------------------------------------- */
-@media screen (min-width:600px) {
+@media screen and (max-width:600px) {
+    .background-image {
+        height: 73vh;
+        top: 90px;
+        right: -39vh
+    }    
+    .mainvisual-wrapper {
+        margin-top: 68vh;
+        margin-left: 30px;
+
+        .welcome-to-text {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .mainvisual-name {
+            align-items: start;
+            .mainvisual-logo {
+                width: 100px;
+            }
+    
+            .mainvisual-name-text {
+                display: none;
+            }
+            .mainvisual-name-text2 {
+                display: block;
+                font-size: 60px;
+                line-height: 150%;
+                margin-left: -20px;
+                margin-top: 16px;
+            }
+            
+        }
+    
+        .portfolio-website-text {
+            font-size: 24px;
+            margin-top: 2vw;
+        }
+    
     }
+}
 
 
 
