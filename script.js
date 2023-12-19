@@ -1,8 +1,8 @@
 'use strict'
 
-if (window.matchMedia('(max-width: 600px)').matches) {
+// if (window.matchMedia('(max-width: 600px)').matches) {
 
-  let br = document.querySelector('.mainvisual-name-text').textContent = 'aruka\nKato'
+//   let br = document.querySelector('.mainvisual-name-text').textContent = 'aruka\nKato'
 
 
 
@@ -14,9 +14,9 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 
 
   
-  let addclass = document.getElementById('works').classList.add('container-width')
-  console.log(addclass)
-}
+//   let addclass = document.getElementById('works').classList.add('container-width')
+//   console.log(addclass)
+// }
 
 
 

@@ -108,7 +108,7 @@ header {
     & ul {
         list-style: none;
         display: flex;
-        gap: 30px;
+        gap: 20px;
         position: absolute;
         right: 0;
         top: 50%;
@@ -116,7 +116,7 @@ header {
         margin-right: 30px;    
         
         & li a {
-            font-size: 20px;
+            font-size: 10px;
             text-decoration: none;
             mix-blend-mode: difference;
             color: #000;
@@ -126,7 +126,7 @@ header {
 }
 
 #nav-logo {
-    height: 60px;
+    height: 40px;
     margin-top: 5px;
 }
 
@@ -199,6 +199,10 @@ footer {
 共通設定　レスポンシブ
 -------------------------------------------------------- */
 @media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
+
     header {
         border: none;
         backdrop-filter: none;
@@ -227,6 +231,7 @@ footer {
         text-align: start;
     }
     .container-width {
+        display: block;
         margin-inline: 30px;
     }
     
@@ -396,8 +401,8 @@ topページ
     }
 }
 
-/* -----thank erea----- */
-.thank-erea {
+/* -----thank area----- */
+.thank-area {
     height: 90vh;
     display: flex;
     align-items: center;
@@ -440,12 +445,53 @@ topページ　レスポンシブ
             }
             
         }
-    
         .portfolio-website-text {
             font-size: 24px;
             margin-top: 2vw;
         }
     
+    }
+
+
+
+
+    #about {
+        position: relative;
+    }
+    #view-more {
+        position: absolute;
+        bottom: -77px;
+        right: 30px;
+    }
+    .about-inner {
+        & img {
+            width: 280px;
+            margin-inline: auto;
+        }
+    }
+    .about-description {
+        font-size: 0.9rem;
+        width: 265px;
+        margin-top: -70px;
+        margin-inline: auto 30px;
+    }
+
+
+
+
+
+
+
+    .skills-design-description {
+         display: inline;
+    }
+    .development-wrapper {
+        display: inline;
+        .skills-development-description {
+            display: inline;
+            margin-left: 0;
+        }
+
     }
 }
 
@@ -538,6 +584,7 @@ aboutページ
     margin-top: 50px;
     
     & img {
+        width: 80vw;
         max-width: 900px;
     }
 
@@ -572,6 +619,7 @@ worksページ
         margin-block: 50px;
 
         & img {
+            width: 80%;
             max-width: 900px;
         }
     }
