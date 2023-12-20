@@ -14,7 +14,7 @@
 
 </head>
 
-<body>            
+<body>
     <header>
         <nav id="nav">
             <a href="#"><img id="nav-logo" src="./img/ロゴマーク.svg" alt="ロゴマーク"></a>
@@ -40,6 +40,8 @@
                 <div class="mainvisual-name">
                     <img class="mainvisual-logo" src="./img/ロゴマーク.svg" alt="">
                     <h1 class="mainvisual-name-text">aruka Kato</h1>
+
+                    <!-- mainvisualレスポンシブ -->
                     <h1 class="mainvisual-name-text2">aruka<br>　 Kato
                     </h1>
                 </div>
@@ -48,22 +50,22 @@
         </div>
 
 
-            <section id="about" class="container-width">
-                <h2 class="black-title">About</h2>
-                <p class="ruby">自己紹介</p>
-                <div class="about-inner">
-                    <button id="view-more">view more</button>
-                    <img src="./img/顔写真白黒.png" alt="顔写真">
-                </div>
-                <div class="about-description">
-                    <p>1999年生まれ　大分県出身<br>
-                        長岡造形大学　建築・環境デザイン学科を卒業<br>
-                        <br>
-                        幼少期からデザインに興味があり音楽、ファッションなど幅広く趣味を持つ。
-                        大学在学中の怪我により車椅子生活になるがWEBデザイナーを志す。
-                    </p>
-                </div>
-            </section>
+        <section id="about" class="container-width">
+            <h2 class="black-title">About</h2>
+            <p class="ruby">自己紹介</p>
+            <div class="about-inner">
+                <button id="view-more">view more</button>
+                <img src="./img/顔写真白黒.png" alt="顔写真">
+            </div>
+            <div class="about-description">
+                <p>1999年生まれ　大分県出身<br>
+                    長岡造形大学　建築・環境デザイン学科を卒業<br>
+                    <br>
+                    幼少期からデザインに興味があり音楽、ファッションなど幅広く趣味を持つ。
+                    大学在学中の怪我により車椅子生活になるがWEBデザイナーを志す。
+                </p>
+            </div>
+        </section>
 
 
         <div class="black-container">
@@ -95,9 +97,33 @@
 
         <div class="white-container">
             <section id="works">
+                <div class="carousel">
                 <h2 class="black-title">Works</h2>
                 <p class="ruby">作品集</p>
-                <div class="carousel">
+                <ul>
+                    <li>
+                        <img class="works-image" src="./img/Worksサムネイル.webp" alt="work1">
+                        <p class="works-name">Works No.1 / バナー広告</p>
+                        <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li>
+                            <img class="works-image" src="./img/worksサムネイル2.webp" alt="work2">
+                            <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                        <li>
+                            <img class="works-image" src="./img/worksサムネイル3.webp" alt="works3">
+                            <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- レスポンシブcarousel -->
+                
+                <div class="carousel2">
+                    <h2 class="black-title">Works</h2>
+                    <p class="ruby">作品集</p>
                     <ul>
                         <li>
                             <img class="works-image" src="./img/Worksサムネイル.webp" alt="work1">
@@ -112,20 +138,38 @@
                         <li>
                             <img class="works-image" src="./img/worksサムネイル3.webp" alt="works3">
                             <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>                            
+                        </li>
+                        <li>
+                            <img class="works-image" src="./img/Worksサムネイル.webp" alt="work1">
+                            <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                        <li>
+                            <img class="works-image" src="./img/worksサムネイル2.webp" alt="work2">
+                            <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                        <li>
+                            <img class="works-image" src="./img/worksサムネイル3.webp" alt="works3">
+                            <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>                            
                         </li>
                     </ul>
                 </div>
-                    <div class="thumbnail-box">
-                        <ul>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
-                            <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
-                        </ul>
-                    </div>
+
+
+
+                <div class="thumbnail-box">
+                    <ul>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
+                        <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
+                    </ul>
+                </div>
             </section>
         </div>
 
@@ -140,7 +184,7 @@
 
 
         <div class="thank-area container-width">
-            <h1 class="thank subtitle">Thank you for Watching !</h1>
+            <h1 class="thank subtitle">Thank you for Watching!</h1>
         </div>
     </main>
     <footer>

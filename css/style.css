@@ -93,7 +93,7 @@ main {
 header {
     position: fixed;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border: 1px solid #000;
     border-top: none;
     border-radius: 0 0 25px 25px;
@@ -116,7 +116,7 @@ header {
         margin-right: 30px;    
         
         & li a {
-            font-size: 10px;
+            font-size:17px;
             text-decoration: none;
             mix-blend-mode: difference;
             color: #000;
@@ -204,6 +204,7 @@ footer {
     }
 
     header {
+        width: 100vw;
         border: none;
         backdrop-filter: none;
 
@@ -232,7 +233,7 @@ footer {
     }
     .container-width {
         display: block;
-        margin-inline: 30px;
+        width: calc(100vw - 60px);
     }
     
     footer {
@@ -269,7 +270,6 @@ topページ
             margin-left: -3.5vw;
             margin-bottom: 5.5vw;
             font-size: 10vw;
-            font-stretch: ;
 
         }
     }
@@ -328,21 +328,21 @@ topページ
 
     .design-wrapper {
         margin-block: 50px;
-    
+        
         .skills-design-description {
             width: 45%;
             max-width: 500px;
         }
     }
-
+    
     & img {
         width: 100%;
     }
-
+    
     .development-wrapper {
         margin-left: 50%;
         margin-block: 50px;
-    
+        
         .skills-development-description {
             max-width: 500px;
             width: 100%;
@@ -370,8 +370,12 @@ topページ
     }
     
     & li:last-child {
-        transform: translateX(50%);
+        /* transform: translateX(50%); */
     }
+}
+
+.carousel2 {
+    display: none;
 }
 
 .thumbnail-box ul {
@@ -417,7 +421,7 @@ topページ　レスポンシブ
     .background-image {
         height: 73vh;
         top: 90px;
-        right: -39vh
+        right: -47vh
     }    
     .mainvisual-wrapper {
         margin-top: 68vh;
@@ -453,7 +457,7 @@ topページ　レスポンシブ
     }
 
 
-
+    /* -----about----- */
 
     #about {
         position: relative;
@@ -472,26 +476,108 @@ topページ　レスポンシブ
     .about-description {
         font-size: 0.9rem;
         width: 265px;
+        height: auto;
         margin-top: -70px;
         margin-inline: auto 30px;
+        padding-top: 30px;
     }
 
 
 
 
+    #skills {
 
-
-
-    .skills-design-description {
-         display: inline;
-    }
-    .development-wrapper {
-        display: inline;
-        .skills-development-description {
-            display: inline;
-            margin-left: 0;
+        .design-wrapper {
+            .subtitle {
+                display: inline;
+            }
+            & p:first-of-type {
+                display: inline;
+            }
+            
+            .skills-design-description {
+                width: calc(100vw - 120px);
+                margin-top: 20px;
+                margin-inline: 30px;
+                
+            }
+            
+            & p:last-of-type {
+                margin-left: 30px;
+            }
         }
+        
+        & img {
+            width: calc(100vw - 120px);
+            margin-inline: 30px;
+        }
+    
+        .development-wrapper {
+            margin-inline: auto;
+            
+            .subtitle {
+                display: inline;
+            }
+            
+            & p:first-of-type {
+                display: inline;
+            }
+            
+            .skills-development-description {
+                width: calc(100vw - 120px);
+                margin-top: 20px;
+                margin-inline: 30px;
+            }
+            
+            & p:last-of-type {
+                margin-left: 30px;
+            }
+            
+        }        
+    }
+    /* -----works----- */
+    #works {
+        .carousel {
+            display: none;
+        }
+        & p:first-of-type {
+            margin-bottom: 5px;
+        }
+        .carousel2 {
+            display: block;
+            width: calc(100vw - 60px);
+            margin-inline: auto;
 
+            & ul {
+                list-style: none;
+                & li {
+                    margin-top: 40px;
+                }
+            }
+            & img {
+                border-radius: 30px;
+                width: 100%;
+            }
+        }
+        
+        .thumbnail-box {
+            display: none;
+        }
+        
+    }
+
+    #contact {
+        .mail {
+            font-size: 1.7rem;
+        }
+    }
+
+    .thank-area {
+        
+        & h1 {
+            line-height: 200%;
+            width: 250px;
+        }
     }
 }
 
@@ -552,10 +638,6 @@ aboutページ
     .career-wrapper {
         margin-top: 100px;
 
-        & ul {
-            list-style: none
-        }
-    
         & li {
            display: flex;
        }
@@ -593,17 +675,81 @@ aboutページ
     margin-top: 10px;
     margin-bottom: 50px;
 }
+.white-footer {
+    padding-bottom: 0;
+}
 
 
+/* --------------------------------------------------------
+aboutページレスポンシブ 
+------------------------------------------------------------*/
+@media screen and (max-width:600px) {
+    .about-top {
+        & img {
+            width: 150vw;
+            height: auto;
+            margin-left: -50vw;
+        }
+    }
+    #introduction {
+        & p:first-of-type {
+            text-align: start;
+        }
+        .text-block {
+            margin-inline: 30px;
+        }
+        .vision {
+            .vision-description {
+                margin-inline: 30px;
+            }
+        }
+    }
+
+    #career {
+        .career-wrapper {
+            & ul {
+                margin-left: 30px;
+                border-left: 2px solid #fff;
+                & li {
+                    display: block;
+                }
+            }
+        }
+    }
+    .left {
+        width: 80%;
+        border-right: none;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    .right {
+        width: auto;
+        margin-inline:30px;
+        margin-bottom: 100px;
+        padding-left: 0;
+    }
+
+    .honeycomb {
+        margin-bottom: 50px;
+    }
+    .strength-description {
+        margin-inline: 30px;
+        margin-bottom: 100px;
+    }
+
+}
+    
 
 /* --------------------------------------------------------
 worksページ
 ---------------------------------------------------------- */
 .works-title {
-        color: #000;
+        color: #fff;
         font-size: 6rem;
         text-align: center;
         margin-block: 100px;
+        -webkit-text-stroke: 1px #000;
+
 }
 
 /* -----作品説明----- */
@@ -677,11 +823,20 @@ worksページ
     justify-content: space-between;
     margin-bottom: 100px;
 
+    & p {
+        margin-bottom: 20px;
+        background: none;
+    }
+
     .desktop-screen {
         width: 66%;
         height: 100%;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
-                    -5px -5px 15px rgba(0, 0, 0, 0.25);
+        
+        & img {
+            width: 100%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+                        -5px -5px 15px rgba(0, 0, 0, 0.25);
+        }            
     }
     .smartphone-screen {
         width: 25%;
@@ -695,4 +850,70 @@ worksページ
     background-color: #2C3630;
 }
 
+
+/* ------------------------------------------------------
+worksページ　レスポンシブ
+-------------------------------------------------------- */
+@media screen and (max-width:600px) {
+    .work-wrapper {
+        .subtitle {
+            font-size: 27px;
+        }
+        .work-mockup {
+            & img {
+                width: 100%;
+            }
+        } 
+        .work-category {
+            font-size: 0.8rem;
+            margin-right: 30px;
+        }
+        .work-information {
+            & ul {
+                margin-left: 30px;
+            }
+            & li {
+                display: block;
+                .work-information-title {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    width: auto;
+                    margin-bottom: 10px;
+                }
+                .work-informaiton-description {
+                    width: 100%;
+                    padding-right: 30px;
+                }
+            }
+        }
+        .work-making {
+            text-align: start;
+            line-height: 200%;
+            font-size: 0.6rem;
+            margin-left: 30px;
+            .production {
+                .production-period {
+                    gap: 10px;
+                }
+                .tools-used {
+                    gap: 10px;
+                    padding-right: 30px;
+                }
+            }
+
+        }
+    }
+
+    .site-screen {
+        & p {
+        }
+        display: block;
+        .desktop-screen {
+            width: 100%;
+        }    
+        .smartphone-screen {
+            width: 100%;
+        }    
+    }
+}
 
