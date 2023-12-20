@@ -140,9 +140,9 @@ header {
 
 
 
-/* ハンバーガーメニューアイコン
+/* ハンバーガーメニューアイコン */
 .drawer_hidden {
-    display: none;
+    /* display: none; */
   }
 
 
@@ -172,7 +172,7 @@ header {
   }
   .drawer_open span:after {
     top: 8px;
-  }   */
+  }  
 
 /* -----footer----- */
 footer {
@@ -220,6 +220,12 @@ footer {
         #nav ul {
             display: none;
         }
+
+        /* ------------------ハンバーガーメニュー---------------- */
+        /* .hamburger-menu {
+            display: block;
+            height: 95px;
+        } */
     }
 
     .black-title,
@@ -731,6 +737,7 @@ aboutページレスポンシブ
 
     .honeycomb {
         margin-bottom: 50px;
+        
     }
     .strength-description {
         margin-inline: 30px;
@@ -824,7 +831,8 @@ worksページ
     margin-bottom: 100px;
 
     & p {
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
         background: none;
     }
 
@@ -841,8 +849,12 @@ worksページ
     .smartphone-screen {
         width: 25%;
         height: 100%;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
-                    -5px -5px 15px rgba(0, 0, 0, 0.25);
+
+        & img {
+            width: 100%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+                        -5px -5px 15px rgba(0, 0, 0, 0.25);
+        }
     }
 }
 /* -----footer----- */
@@ -905,8 +917,6 @@ worksページ　レスポンシブ
     }
 
     .site-screen {
-        & p {
-        }
         display: block;
         .desktop-screen {
             width: 100%;
@@ -914,6 +924,32 @@ worksページ　レスポンシブ
         .smartphone-screen {
             width: 100%;
         }    
+    }
+    .works-container {
+        padding-bottom: 50px;
+    }
+    .carousel {
+        display: none;
+    }
+    .carousel2 {
+        display: block;
+        width: calc(100vw - 60px);
+        margin-inline: auto;
+
+        & ul {
+            list-style: none;
+            & li {
+                margin-top: 40px;
+            }
+        }
+        & img {
+            border-radius: 30px;
+            width: 100%;
+        }
+
+    }
+    .thumbnail-box {
+        display: none;
     }
 }
 
