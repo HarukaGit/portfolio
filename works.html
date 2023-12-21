@@ -18,6 +18,7 @@
     <header>
         <nav id="nav">
             <a href="#"><img id="nav-logo" src="./img/ロゴマーク.svg" alt="ロゴマーク"></a>
+            <img class="open" src="./img/メニューバーopen.png" alt="">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -27,6 +28,21 @@
         </nav>
     </header>
     <main>
+        <div class="hamburger-menu">
+            <a href="#"><img id="nav-logo" src="./img/ロゴマークwhite.svg" alt="ロゴマーク"></a>
+            <img class="close" src="./img/メニューバーclose.png" alt="">
+            <div class="menu-container">
+              <ul class="nav-list">
+                  <li class="nav-link"><a href="./index.html">Home</a></li>
+                  <li class="nav-link"><a href="./about.html">About</a></li>
+                  <li class="nav-link"><a class="this-page" href="index.html#works">Works</a></li>
+                  <li class="nav-link"><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>        
+
+
+
         <div class="container-width">
             <div class="work-wrapper">
                 <h1 class="works-title">Works</h1>
@@ -92,24 +108,41 @@
                 </div>
             </div>
         </div>
+
         <div class="black-container works-container">
-            <section id="Works">
-                <div class="carousel">
-                <h2 class="white-title">Works</h2>
+            <section id="works" class="side-scroll section">
+                <div class="carousel side-scroll-container container">
+                <h2 class="black-title">Works</h2>
                 <p class="ruby">作品集</p>
-                    <ul>
-                        <li>
-                            <img class="works-image" src="./img/Worksサムネイル.webp" alt="work1">
+                <div class="side-scroll-list-wrapper">
+                <ul class="side-scroll-list">
+                    <li>
+                        <img class="side-scroll-item" src="./img/Worksサムネイル.webp" alt="work1">
+                        <p class="works-name">Works No.1 / バナー広告</p>
+                        <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li>
+                            <img class="side-scroll-item" src="./img/worksサムネイル2.webp" alt="work2">
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
                         <li>
-                            <img class="works-image" src="./img/worksサムネイル2.webp" alt="work2">
+                            <img class="side-scroll-item" src="./img/worksサムネイル3.webp" alt="works3">
+                            <p class="works-name">Works No.1 / バナー広告</p>
+                            <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </li>
+                    <li>
+                        <img class="side-scroll-item" src="./img/Worksサムネイル.webp" alt="work1">
+                        <p class="works-name">Works No.1 / バナー広告</p>
+                        <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li>
+                            <img class="side-scroll-item" src="./img/worksサムネイル2.webp" alt="work2">
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
                         <li>
-                            <img class="works-image" src="./img/worksサムネイル3.webp" alt="works3">
+                            <img class="side-scroll-item" src="./img/worksサムネイル3.webp" alt="works3">
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
@@ -155,7 +188,7 @@
                                     </ul>
                                 </div>
                 
-                    <div class="thumbnail-box">
+                    <!-- <div class="thumbnail-box">
                         <ul>
                             <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
                             <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
@@ -164,7 +197,7 @@
                             <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
                             <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
                         </ul>
-                    </div>
+                    </div> -->
             </section>
         </div>
     </main>
@@ -178,5 +211,8 @@
         </div>
     </footer>
 </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="./script.js"></script>
 
 </html>
