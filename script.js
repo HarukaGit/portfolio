@@ -70,7 +70,7 @@ gsap.to(listEl, {
   ease: 'none',
   scrollTrigger: {
     trigger: '.side-scroll',
-    start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
+    start: '-20% top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
     end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
     scrub: true,
     pin: true,
