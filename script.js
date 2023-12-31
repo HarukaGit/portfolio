@@ -4,6 +4,8 @@ const isMenuOpen = document.querySelector(".open");
 const isMenuClose = document.querySelector(".close");
 const getNav = document.getElementById("nav");
 const displayOriginal = getNav.style.display;
+const getHamburgerMenuNav = document.getElementById("hamburger-menu-nav");
+const displayOriginal2 = getHamburgerMenuNav.style.display;
 const getBody = document.querySelector("body");
 const overflowOriginal = getBody.style.overflow;
 
@@ -43,11 +45,13 @@ isMenuClose.addEventListener("click", () => {
     tl.play().timeScale(1);
     getNav.style.display = 'none';
     getBody.style.overflow = 'hidden'
+    getHamburgerMenuNav.style.display = displayOriginal2;
   });
   
   isMenuClose.addEventListener("click", () => {
     tl.timeScale(3);
     tl.reverse();
+    getHamburgerMenuNav.style.display = 'none';
     getNav.style.display = displayOriginal;
     getBody.style.overflow = overflowOriginal;
   });
@@ -78,3 +82,5 @@ gsap.to(listEl, {
     invalidateOnRefresh: true,
   },
 });
+
+console.log(gsap)

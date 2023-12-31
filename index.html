@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio top page</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,8 +31,10 @@
     </header>
     <main>
         <div class="hamburger-menu">
-            <a href="#"><img id="nav-logo" src="./img/ロゴマークwhite.svg" alt="ロゴマーク"></a>
-            <img class="close" src="./img/メニューバーclose.png" alt="">
+            <div id="hamburger-menu-nav">
+                <a href="./index.html"><img id="nav-logo" src="./img/ロゴマークwhite.svg" alt="ロゴマーク"></a>
+                <img class="close" src="./img/メニューバーclose.png" alt="">
+            </div>
             <div class="menu-container">
               <ul class="nav-list">
                   <li class="nav-link"><a class="this-page" href="#">Home</a></li>
@@ -64,7 +67,7 @@
             <h2 class="black-title">About</h2>
             <p class="ruby">自己紹介</p>
             <div class="about-inner">
-                <a id="view-more" href="./about.html">view more</a>
+                <a class="view-more" href="./about.html">view more</a>
                 <img src="./img/顔写真白黒.png" alt="顔写真">
             </div>
             <div class="about-description">
@@ -113,32 +116,38 @@
                 <div class="side-scroll-list-wrapper">
                 <ul class="side-scroll-list">
                     <li>
-                        <a href="./works.html"><img class="side-scroll-item" src="./img/Worksサムネイル.png" alt="work1"></a>
+                        <div class="zoom-image">
+                        <a href="./works.html"><img class="side-scroll-item" src="./img/Worksサムネイル.png" alt="work1"></a></div>
                         <p class="works-name">Works No.1 / バナー広告</p>
                         <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </li>
                     <li>
-                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル2.png" alt="work2"></a>
+                        <div class="zoom-image">
+                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル2.png" alt="work2"></a></div>
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
                         <li>
-                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル3.png" alt="works3"></a>
+                            <div class="zoom-image">
+                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル3.png" alt="works3"></a></div>
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
                     <li>
-                        <a href="./works.html"><img class="side-scroll-item" src="./img/Worksサムネイル.png" alt="work1"></a>
+                        <div class="zoom-image">
+                        <a href="./works.html"><img class="side-scroll-item" src="./img/Worksサムネイル.png" alt="work1"></a></div>
                         <p class="works-name">Works No.1 / バナー広告</p>
                         <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </li>
                     <li>
-                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル2.png" alt="work2"></a>
+                        <div class="zoom-image">
+                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル2.png" alt="work2"></a></div>
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
                         <li>
-                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル3.png" alt="works3"></a>
+                            <div class="zoom-image">
+                            <a href="./works.html"><img class="side-scroll-item" src="./img/worksサムネイル3.png" alt="works3"></a></div>
                             <p class="works-name">Works No.1 / バナー広告</p>
                             <p class="works-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </li>
@@ -191,18 +200,6 @@
                     </ul>
                 </div>
 
-
-
-                <!-- <div class="thumbnail-box">
-                    <ul>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル.webp" alt=""></li>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル2.webp" alt=""></li>
-                        <li><img class="works-thumbnail" src="./img/Worksサムネイル3.webp" alt=""></li>
-                    </ul>
-                </div> -->
             </section>
         </div>
 
