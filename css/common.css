@@ -86,6 +86,55 @@ main {
     margin-inline: auto;
 }
 
+/* -----js用設定----- */
+
+.title-word {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* -----jsアニメーション----- */
+.js-popUp{
+    transform: scale(.9);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.welcome-to-text {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 1;
+    margin-top: 32px;
+}
+  
+.welcome-to-text:first-of-type {
+    margin-top: 0px;
+}
+  
+.welcome-to-text .char {
+    transform: translateY(100px);
+    transition: transform 0.5s;
+  }
+  
+header {
+    margin-top: -100px;
+}
+
+.c-header__text {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 1;
+}
+.nav-text .char {
+    transform: translateY(-100px);
+    transition: transform 0.5s;
+    margin-left: 1px;
+}
+
+
+
+
 
 
 /* -----header----- */
@@ -151,6 +200,9 @@ header {
 .mainvisual-name-text2 {
     display: none;
 }
+.mainvisual-name-text3 {
+    display: none;
+}
 
 /* ----------------------------------------------- */
 
@@ -173,6 +225,7 @@ header {
 /* -----footer----- */
 footer {
     border-top: 1px solid #909090;
+    z-index: 20;
 
     .footer-wrapper {
         
@@ -233,7 +286,10 @@ footer {
         text-align: start;
         font-size: 3rem;
     }
-    
+
+    .title-word {
+        justify-content: start;
+    }    
 
 /* -----ハンバーガーメニュー------ */
         .hamburger-menu {
@@ -313,7 +369,6 @@ topページ
 ---------------------------------------------------- */
 /* -----mainvisual----- */
 #mainvisual {
-    aspect-ratio: 16/9;
 }
 
 .mainvisual-wrapper {
@@ -418,7 +473,6 @@ topページ
 
 /* -----skills----- */
 #skills {
-
     .design-wrapper {
         margin-block: 50px;
         
@@ -444,6 +498,17 @@ topページ
 }
 
 /* -----works----- */
+.white-works-container {
+    position: relative;
+    z-index: 5;
+    background-color: #fff;
+    border-radius: 50px 50px 0 0;
+    margin-top: -50px;
+    padding-top: 90px;
+    padding-bottom: 140px;
+
+}
+
 .section {
     width: 100%;
   }
@@ -513,10 +578,14 @@ topページ
 
 
 /* -----contact----- */
+.contact-container {
+    position: relative;
+    z-index: 6;
+}
 .mail {
     font-size:min(4vw,70px);
     text-align: center;
-    margin-top: 50px;    
+    margin-top: 50px;   
     & a {
         text-decoration: none;
         color: #909090;
@@ -547,8 +616,13 @@ topページ　レスポンシブ
         top: 90px;
         right: -47vh
     }    
+    #mainvisual {
+        height: 100vh;
+        padding-top: 60vh;
+    }
     .mainvisual-wrapper {
-        margin-top: 68vh;
+        display: block;
+        margin-top: 0;
         margin-left: 30px;
 
         .welcome-to-text {
@@ -571,6 +645,13 @@ topページ　レスポンシブ
                 margin-left: -20px;
                 margin-top: 16px;
             }
+            .mainvisual-name-text3 {
+                display: block;
+                font-size: 60px;
+                line-height: 150%;
+                margin-left: -100px;
+                margin-top: 90px;
+            }
             
         }
         .portfolio-website-text {
@@ -585,6 +666,7 @@ topページ　レスポンシブ
 
     #about {
         position: relative;
+        margin-top: 100px;
     }
     
     .about-inner {
@@ -608,7 +690,6 @@ topページ　レスポンシブ
         margin-inline: auto 30px;
         padding-top: 30px;
     }
-
 
 
 
@@ -734,11 +815,14 @@ aboutページ
         margin-block: 100px;
     }
 
-    & img {
-        width: 100%;
-        margin-block: 50px;
+        & img {
+            width: 100%;
+            margin-block: 50px;
+            transform: scale(1.1);
+            transition-duration: 1s;
+        }
     }
-}
+
 
 /* -----introduction------ */
 #introduction {
@@ -794,7 +878,7 @@ aboutページ
 .honeycomb {
     text-align: center;
     margin-top: 50px;
-    
+
     & img {
         width: 80vw;
         max-width: 900px;
@@ -815,6 +899,7 @@ aboutページレスポンシブ
 ------------------------------------------------------------*/
 @media screen and (max-width:600px) {
     .about-top {
+        padding-top: 10vh;
         & img {
             width: 150vw;
             height: auto;
@@ -880,6 +965,11 @@ worksページ
         text-align: center;
         margin-block: 100px;
         -webkit-text-stroke: 1px #000;
+
+        .works-name-title {
+            display: flex;
+            justify-content: center;
+        }
 
 }
 
@@ -981,6 +1071,16 @@ worksページ
         }
     }
 }
+
+.black-works-container {
+    color: #fff;
+    background-color: #2C3630;
+    border-radius: 50px 50px 0 0;
+    margin-top: -50px;
+    padding-top: 90px;
+    padding-bottom: 140px;
+
+}
 /* -----footer----- */
 .black-footer {
     background-color: #2C3630;
@@ -992,7 +1092,11 @@ worksページ　レスポンシブ
 -------------------------------------------------------- */
 @media screen and (max-width:600px) {
     .work-wrapper {
-        .subtitle {
+        padding-top: 10vh;
+
+        .works-name-title {
+            display: flex;
+            justify-content: center;
             font-size: 27px;
         }
         .work-mockup {
