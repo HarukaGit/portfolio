@@ -1,6 +1,13 @@
 'use strict'
 
-
+gsap.fromTo("body",
+{
+  autoAlpha: 0,
+},
+{
+  autoAlpha: 1,
+  duration: 1,
+})
 
 const checkWorks = document.getElementById("works");
 console.log(checkWorks);
@@ -222,7 +229,7 @@ timeline.fromTo(mainVisualLogo,
             
             
             
-            const getSkillsImage = document.querySelector(".skills-image")
+            const getSkillsImage = document.querySelectorAll(".skills-image,.skills-image2")
             gsap.fromTo(
               getSkillsImage, 
               {
@@ -277,7 +284,7 @@ timeline.fromTo(mainVisualLogo,
         },
         scrollTrigger:{
           trigger:target,
-          start:'top center'
+          start:'center bottom'
         }
       })
     }); //連続ポップインアニメーション

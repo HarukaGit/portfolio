@@ -11,6 +11,7 @@ html {
     font-size: 100%;
     line-height: 200%;
     max-width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -134,8 +135,13 @@ header {
 
 
 
-
-
+/* -----ページ内リンク位置調整----- */
+section::before {
+    content:'';
+    display: block;
+    padding-top: 150px;
+    margin-top: -150px;
+  }
 
 /* -----header----- */
 header {
@@ -146,51 +152,52 @@ header {
     border-top: none;
     border-radius: 0 0 25px 25px;
     backdrop-filter: blur(4px);
-}
 
-#nav {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-    & ul {
-        list-style: none;
+    #nav {
         display: flex;
-        gap: 20px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 30px;    
+        justify-content: center;
+        position: relative;
         
-        & li a {
-            font-size:17px;
-            text-decoration: none;
-            mix-blend-mode: difference;
-            color: #000;
-            padding-bottom: 5px;
-            position: relative;
-        }
-        & li a::before {
-            background: #000;
-            content: '';
-            width: 100%;
-            height: 1px;
+        & ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
             position: absolute;
-            left: 0;
-            bottom: 0;
-            margin: auto;
-            transform-origin: right top;
-            transform: scale(0, 1);
-            transition: transform .3s;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 30px;    
+            
+            & li a {
+                font-size:17px;
+                text-decoration: none;
+                color: #000;
+                mix-blend-mode: difference;
+                padding-bottom: 5px;
+                position: relative;
+            }
+            & li a::before {
+                background: #000;
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                transform-origin: right top;
+                transform: scale(0, 1);
+                transition: transform .3s;
+            }
+            & li a:hover::before {
+                transform-origin: center top;
+                transform: scale(1, 1);
+            }
+            
         }
-        & li a:hover::before {
-            transform-origin: center top;
-            transform: scale(1, 1);
-        }
-        
     }
 }
+
 
 #nav-logo {
     height: 40px;
@@ -482,8 +489,11 @@ topページ
         }
     }
     
-    & img {
+    .skills-image {
         width: 100%;
+    }
+    .skills-image2 {
+        display: none;
     }
     
     .development-wrapper {
@@ -676,6 +686,10 @@ topページ　レスポンシブ
             position: absolute;
             bottom: -77px;
             right: 30px;
+            .view-more::after {
+                display: none;
+            }
+            
         }
         & img {
             width: 280px;
@@ -714,8 +728,11 @@ topページ　レスポンシブ
                 margin-left: 30px;
             }
         }
-        
-        & img {
+        .skills-image {
+            display: none;
+        }
+        .skills-image2 {
+            display: block;
             width: calc(100vw - 120px);
             margin-inline: 30px;
         }
@@ -986,7 +1003,7 @@ worksページ
         margin-block: 50px;
 
         & img {
-            width: 80%;
+            height: 500px;
             max-width: 900px;
         }
     }
