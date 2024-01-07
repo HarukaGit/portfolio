@@ -708,7 +708,7 @@ topページ　レスポンシブ
 
 
     #skills {
-
+        overflow: hidden;
         .design-wrapper {
             .subtitle {
                 display: inline;
@@ -835,8 +835,6 @@ aboutページ
         & img {
             width: 100%;
             margin-block: 50px;
-            transform: scale(1.1);
-            transition-duration: 1s;
         }
     }
 
@@ -1119,6 +1117,7 @@ worksページ　レスポンシブ
         .work-mockup {
             & img {
                 width: 100%;
+                height: auto;
             }
         } 
         .work-category {
