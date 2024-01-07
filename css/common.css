@@ -621,13 +621,15 @@ topページ
 topページ　レスポンシブ
 -------------------------------------------------------- */
 @media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
     .background-image {
         height: 73vh;
         top: 90px;
         right: -47vh
     }    
     #mainvisual {
-        overflow: hidden;
         height: 100vh;
         padding-top: 60vh;
     }
