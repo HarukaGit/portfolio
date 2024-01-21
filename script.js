@@ -127,7 +127,6 @@ gsap.to(".nav-text.contact .char", {
 // };
 
 
-// gsap.call(headerAnimation);
 
 
 

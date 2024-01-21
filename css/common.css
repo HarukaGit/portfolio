@@ -690,7 +690,9 @@ topページ　レスポンシブ
             .view-more::after {
                 display: none;
             }
-            
+        .view-more::after {
+            display: none;
+        } 
         }
         & img {
             width: 280px;
