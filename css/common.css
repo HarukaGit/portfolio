@@ -267,6 +267,7 @@ footer {
         width: 100vw;
         border: none;
         backdrop-filter: none;
+        background: none;
 
         #nav {
             justify-content: space-between;
