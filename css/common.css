@@ -687,13 +687,10 @@ topページ　レスポンシブ
             position: absolute;
             bottom: -77px;
             right: 30px;
-            .view-more::after {
-                display: none;
-            }
+        }
         .view-more::after {
             display: none;
         } 
-        }
         & img {
             width: 280px;
             margin-inline: auto;
