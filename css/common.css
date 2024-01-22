@@ -240,7 +240,7 @@ footer {
         display: flex;
         color: #909090;
         justify-content: space-between;
-        margin-top: 10px;
+        padding-block: 15px;
 
         .back-to-top {
             color: #909090;
@@ -656,7 +656,7 @@ topページ　レスポンシブ
 
     .mainvisual-wrapper {
         display: block;
-        margin-top: 0;
+        margin-top: -5vh;
         margin-left: 30px;
 
         .welcome-to-text {
