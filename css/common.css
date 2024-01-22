@@ -639,6 +639,9 @@ topページ
 topページ　レスポンシブ
 -------------------------------------------------------- */
 @media screen and (max-width:600px) {
+    main {
+        overflow-x: hidden
+    }
     .background-image {
         height: 73vh;
         top: 90px;
@@ -704,7 +707,6 @@ topページ　レスポンシブ
         position: relative;
         margin-top: 100px;
     }
-
     .about-inner {
 
         .view-more {
@@ -713,17 +715,14 @@ topページ　レスポンシブ
             bottom: -77px;
             right: 30px;
         }
-
         .view-more::after {
             display: none;
         }
-
         & img {
             width: 280px;
             margin-inline: auto;
         }
     }
-
     .about-description {
         font-size: 0.9rem;
         width: 265px;
@@ -739,50 +738,41 @@ topページ　レスポンシブ
             .subtitle {
                 display: inline;
             }
-
             & p:first-of-type {
                 display: inline;
             }
-
             .skills-design-description {
                 width: calc(100vw - 120px);
                 margin-top: 20px;
                 margin-inline: 30px;
 
             }
-
             & p:last-of-type {
                 margin-left: 30px;
             }
         }
-
         .skills-image {
             display: none;
         }
-
         .skills-image2 {
             display: block;
             width: calc(100vw - 120px);
             margin-inline: 30px;
         }
-
         .development-wrapper {
             margin-inline: auto;
 
             .subtitle {
                 display: inline;
             }
-
             & p:first-of-type {
                 display: inline;
             }
-
             .skills-development-description {
                 width: calc(100vw - 120px);
                 margin-top: 20px;
                 margin-inline: 30px;
             }
-
             & p:last-of-type {
                 margin-left: 30px;
             }
@@ -799,7 +789,6 @@ topページ　レスポンシブ
         & p:first-of-type {
             margin-bottom: 5px;
         }
-
         .carousel2 {
             display: block;
             width: calc(100vw - 60px);
@@ -818,15 +807,11 @@ topページ　レスポンシブ
                     }
                 }
             }
-        }
-
-
+        
         .thumbnail-box {
             display: none;
         }
-
     }
-
     #contact {
         .mail {
             font-size: 1.7rem;
@@ -834,12 +819,12 @@ topページ　レスポンシブ
     }
 
     .thank-area {
-
         & h1 {
             line-height: 200%;
             width: 250px;
         }
     }
+}
 }
 
 
