@@ -10,7 +10,6 @@ gsap.fromTo("body",
 })
 
 const checkWorks = document.getElementById("works");
-console.log(checkWorks);
 if (checkWorks === null) {
   ; //worksがない時にカルーセルを読み込むとエラーが起こるのでここで判別する
 } else {
@@ -37,7 +36,6 @@ const elements = document.querySelectorAll('h2,.ruby');
 
 elements.forEach((elem) => {
   const word = elem.textContent;
-  console.log('word', word);
   elem.innerHTML = '';
 
   // wordごとにdivで囲む
@@ -267,7 +265,7 @@ timeline.fromTo(mainVisualLogo,
       ease:"back.out(1.7)",
       scrollTrigger:{
         trigger:target,
-        start:'top center'
+        start:'top bottom'
       }})
     }); //ポップインアニメーション
     
@@ -301,7 +299,6 @@ timeline.fromTo(mainVisualLogo,
     const tl = gsap.timeline({ paused: true });
     
     isMenuClose.addEventListener("click", () => {
-      console.log("Openボタンをクリックしました！")
     });
     
     tl.fromTo(
