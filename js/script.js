@@ -98,7 +98,6 @@ gsap.to(getHeader, {
   duration: 1,
 })
 
-// const headerAnimation = () => {
 const navText = new SplitType(".nav-text");
 gsap.to(".nav-text.home .char", {
   y: 0,
@@ -124,7 +123,6 @@ gsap.to(".nav-text.contact .char", {
   duration: 0.5,
   ease: Power2.easeInOut,
 });
-// };
 
 
 
@@ -355,15 +353,6 @@ timeline.fromTo(mainVisualLogo,
           repeat: -1, ease: Linear.easeNone
         }); //背景の車輪を回転
         
-        // gsap.fromTo(".about-title-image",
-        // {
-
-        //   scale: 0.9
-        // },
-        // {
-        //   scale: 1,
-        //   duration: 1,
-        // });
         
         
         
