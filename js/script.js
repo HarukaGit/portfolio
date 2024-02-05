@@ -350,7 +350,7 @@ timeline.fromTo(mainVisualLogo,
           getHamburgerMenuNav.style.display = 'none';
           getNav.style.display = displayOriginal;
           getBody.style.overflow = overflowOriginal;
-        })
+        }); //ページ内リンクをタップするとハンバーガーメニュが閉じる。
       }
 
         console.log(isMenuClose2)
