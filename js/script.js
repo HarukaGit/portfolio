@@ -289,6 +289,7 @@ timeline.fromTo(mainVisualLogo,
     
     const isMenuOpen = document.querySelector(".open");
     const isMenuClose = document.querySelector(".close");
+    const isMenuClose2 = document.querySelectorAll(".close2")
     const getNav = document.getElementById("nav");
     const displayOriginal = getNav.style.display;
     const getHamburgerMenuNav = document.getElementById("hamburger-menu-nav");
@@ -341,9 +342,18 @@ timeline.fromTo(mainVisualLogo,
           getNav.style.display = displayOriginal;
           getBody.style.overflow = overflowOriginal;
         }); //ばつ印をタップすると元の画面に戻る
-        
 
+        for(let i = 0; i < isMenuClose2.length; i++) {
+          isMenuClose2[i].addEventListener("click",()=>{
+          tl.timeScale(3);
+          tl.reverse();
+          getHamburgerMenuNav.style.display = 'none';
+          getNav.style.display = displayOriginal;
+          getBody.style.overflow = overflowOriginal;
+        })
+      }
 
+        console.log(isMenuClose2)
         gsap.to(".background-image", {
           duration: 40,
           rotation: 360,
