@@ -779,53 +779,54 @@ topページ　レスポンシブ
         }
     }
 
-    /* -----works----- */
-    #works {
-        .carousel {
-            display: none;
-        }
-
-        & p:first-of-type {
-            margin-bottom: 5px;
-        }
-        .carousel2 {
-            display: block;
-            width: calc(100vw - 60px);
-            margin-inline: auto;
-
-            & ul {
-                list-style: none;
-
-                & li {
-                    margin-top: 40px;
-
-                    & img {
-                        border-radius: 30px;
-                        width: 100%;
-                        transition-duration: .5s;
+        /* -----works----- */
+        #works {
+            .carousel {
+                display: none;
+            }
+    
+            & p:first-of-type {
+                margin-bottom: 5px;
+            }
+    
+            .carousel2 {
+                display: block;
+                width: calc(100vw - 60px);
+                margin-inline: auto;
+    
+                & ul {
+                    list-style: none;
+    
+                    & li {
+                        margin-top: 40px;
+    
+                        & img {
+                            border-radius: 30px;
+                            width: 100%;
+                            transition-duration: .5s;
+                        }
                     }
                 }
+    
+                .thumbnail-box {
+                    display: none;
+                }
             }
-        
-        .thumbnail-box {
-            display: none;
         }
-    }
-    #contact {
-        .mail {
-            font-size: 1.7rem;
-        }
-    }
+            #contact {
+                .mail {
+                    font-size: 1.7rem;
+                }
+            }
+    
+            .thank-area {
+                & h1 {
+                    line-height: 200%;
+                    width: 250px;
+                }
+            }
 
-    .thank-area {
-        & h1 {
-            line-height: 200%;
-            width: 250px;
         }
-    }
-}
-}
-
 
 /* -------------------------------------------------------
 aboutページ

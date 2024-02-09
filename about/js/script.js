@@ -14,7 +14,6 @@ const elements = document.querySelectorAll('h2,.ruby');
 
 elements.forEach((elem) => {
   const word = elem.textContent;
-  console.log('word', word);
   elem.innerHTML = '';
 
   // wordごとにdivで囲む

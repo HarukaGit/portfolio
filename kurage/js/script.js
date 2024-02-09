@@ -10,13 +10,11 @@ gsap.fromTo("body",
 })
 
 const checkWorks = document.getElementById("works");
-console.log(checkWorks);
 if (checkWorks === null) {
   ; //worksがない時にカルーセルを読み込むとエラーが起こるのでここで判別する
 } else {
   const listWrapperEl = document.querySelector('.side-scroll-list-wrapper');
   const listEl = document.querySelector('.side-scroll-list');
-
   gsap.to(listEl, {
     x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
     ease: 'none',
@@ -37,7 +35,6 @@ const elements = document.querySelectorAll('h2,.ruby');
 
 elements.forEach((elem) => {
   const word = elem.textContent;
-  console.log('word', word);
   elem.innerHTML = '';
 
   // wordごとにdivで囲む
@@ -81,17 +78,6 @@ elements.forEach((elem) => {
 }); //セクションタイトルのアニメーション
 
 
-
-
-const mainVisualText = new SplitType(".welcome-to-text");
-gsap.to(mainVisualText.chars, {
-  y: 0,
-  stagger: 0.05,
-  duration: 1,
-  ease: Power2.easeInOut,
-});
-
-
 const getHeader = document.querySelector("header");
 gsap.to(getHeader, {
   y: 100,
@@ -125,49 +111,6 @@ gsap.to(".nav-text.contact .char", {
   ease: Power2.easeInOut,
 });
 // };
-
-
-
-
-
-const mainVisualLogo = document.querySelector(".mainvisual-logo");
-const mainVisualName = new SplitType(".mainvisual-name-text,.mainvisual-name-text2,.mainvisual-name-text3");
-
-const timeline = gsap.timeline();
-timeline.fromTo(mainVisualLogo, 
-  {
-    autoAlpha: 0,
-    scale: 0.9,
-  },
-  {
-    autoAlpha: 1,
-    scale: 1,
-    duration: 0.5,
-  })
-  .fromTo(".background-image",
-  {
-    x: -800,
-  },
-  {
-    x: 0,
-    duration: 2,
-  })
-
-  .fromTo(".mainvisual-name-text .char,.mainvisual-name-text2 .char,.mainvisual-name-text3 .char",
-  {
-    autoAlpha: 0,
-  },
-  {
-    autoAlpha: 1,
-    stagger: 0.15,
-    duration: 1,
-    ease: Power2.easeInOut,
-  },
-  ">-2.2" 
-  );
-  
-  
-  
   
   const getBox = document.querySelectorAll(".list-animetion,.text-block");
   
@@ -208,60 +151,7 @@ timeline.fromTo(mainVisualLogo,
               }
             });
           }); //下からニュルっとフェードイン
-          
-          const getSkills1 = document.querySelector(".design-wrapper")
-          gsap.fromTo(
-            getSkills1, 
-            {
-              x: -50, 
-              autoAlpha: 0,
-            },
-            {
-              x: 0, 
-              autoAlpha: 1, 
-              scrollTrigger: {
-                trigger: getSkills1, 
-                start: "top center", 
-              },
-            }
-            ); //左からフェードイン
-            
-            
-            
-            const getSkillsImage = document.querySelectorAll(".skills-image,.skills-image2")
-            gsap.fromTo(
-              getSkillsImage, 
-              {
-                scale: 0.9,
-                autoAlpha: 0,
-              },
-              {
-                scale: 1,
-                autoAlpha: 1, 
-                scrollTrigger: {
-                  trigger: getSkillsImage, 
-                  start: "top center", 
-                },
-              }
-              ); //拡大しながらフェードイン
-              
-              
-              const getSkills2 = document.querySelector(".development-wrapper")
-              gsap.fromTo(
-                getSkills2, 
-  {
-    x: 50, 
-    autoAlpha: 0,
-  },
-  {
-    x: 0, 
-    autoAlpha: 1, 
-    scrollTrigger: {
-      trigger: getSkills2, 
-      start: "top center", 
-    },
-  }
-  ); //右からフェードイン
+                        
   
   
   gsap.utils.toArray('.js-popUp').forEach(target => {
@@ -346,24 +236,3 @@ timeline.fromTo(mainVisualLogo,
           getNav.style.display = displayOriginal;
           getBody.style.overflow = overflowOriginal;
         }); //ばつ印をタップすると元の画面に戻る
-        
-
-
-        gsap.to(".background-image", {
-          duration: 40,
-          rotation: 360,
-          repeat: -1, ease: Linear.easeNone
-        }); //背景の車輪を回転
-        
-        // gsap.fromTo(".about-title-image",
-        // {
-
-        //   scale: 0.9
-        // },
-        // {
-        //   scale: 1,
-        //   duration: 1,
-        // });
-        
-        
-        
