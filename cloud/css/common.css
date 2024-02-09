@@ -662,7 +662,7 @@ worksページ　レスポンシブ
 
         .work-mockup {
             & img {
-                width: calc(100vw - 120px);
+                width: calc(100vw - 60px);
                 height: auto;
             }
         }
